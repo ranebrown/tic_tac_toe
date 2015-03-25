@@ -1,7 +1,7 @@
 OBJS = main.o DisplayBoard.o menu.o
 CC = g++
-CFLAGS = -Wall -c -g -I.
-LFLAGS = -Wall -g
+CFLAGS = -Wall -Wextra -c -g -I.
+LFLAGS = -Wall -Wextra -g
 
 tic_tac_toe : $(OBJS)
 	$(CC) $(LFLAGS) $(OBJS) -o tic_tac_toe
