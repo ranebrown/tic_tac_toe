@@ -8,7 +8,14 @@
 #ifndef tt_h
 #define tt_h
 
-#include <iostream>
+// header files
+	#include <iostream>
+	#include <fstream>
+	#include <string>
+	#include <stdexcept>
+
+// functions
+	int menu();
     void DisplayBoard();
 
 #endif

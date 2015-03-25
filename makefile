@@ -1,16 +1,19 @@
-OBJS = main.o DisplayBoard.o
+OBJS = main.o DisplayBoard.o menu.o
 CC = g++
-CFLAGS = -Wall -c -g
+CFLAGS = -Wall -c -g -I.
 LFLAGS = -Wall -g
 
 tic_tac_toe : $(OBJS)
 	$(CC) $(LFLAGS) $(OBJS) -o tic_tac_toe
 
-main.o : tt.h main.cpp
+main.o : main.cpp
 	$(CC) $(CFLAGS) main.cpp
 
-DisplayBoard.o : tt.h DisplayBoard.cpp
+DisplayBoard.o : DisplayBoard.cpp
 	$(CC) $(CFLAGS) DisplayBoard.cpp
 
+menu.o : menu.cpp
+	$(CC) $(CFLAGS) menu.cpp
+
 clean:
-	rm *o tic_tac_toe
+	rm *o #tic_tac_toe
