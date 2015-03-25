@@ -25,6 +25,7 @@ int main(int argc, const char * argv[]) {
 	else 
 		std::cout << "You are now O's, the computer is X's\n";
 	DisplayBoard();
-    
+	std::cout << "Enter the number of the square you would like to occupy...\n";
+	    
     return 0;
 }
