@@ -12,21 +12,23 @@ void play(int selection) {
     // Read User Input
     std::string input;
     int check = -1; 
+	int squareToPlay = 0;
     while(1) {
+        std::cin.clear(); // clear flags
+        std::cin.ignore(1000, '\n'); // flush buffer
         std::cin >> input;
         check = 1;
         try {
-            selection = std::stoi(input);
+           squareToPlay = std::stoi(input);
         }   
         catch(std::invalid_argument) {
             std::cout << "Enter an integer not a string\n";
             check = 0;
         }   
-        if((selection < 1 || selection > 9) && check) {
+        if((squareToPlay < 1 || squareToPlay > 9) && check) {
             std::cout << "Enter a a valid integer 1-9.\n";
         }   
-        if(selection >= 1 || selection <= 9)
+        if(squareToPlay >= 1 && squareToPlay <= 9)
             break;
     }
-	std::cout << selection;
 }
