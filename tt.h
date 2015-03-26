@@ -17,5 +17,6 @@
 // functions
 	int menu();
     void DisplayBoard();
+	void play(int selection);
 
 #endif
